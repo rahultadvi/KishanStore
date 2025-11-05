@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const mongooseConnection = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/kisanstore", {
+    await mongoose.connect("mongodb+srv://rahul:Rahul@715@kishanstore.ueskvcr.mongodb.net/?appName=KishanStore", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
