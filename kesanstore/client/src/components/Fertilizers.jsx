@@ -18,7 +18,7 @@ function Fertilizers() {
   useEffect(() => {
     const fetchFertilizers = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/user/all");
+        const res = await axios.get("https://kishanstore-backend.onrender.com/api/user/all");
         setFertilizers(res.data);
       } catch (err) {
         console.error("❌ Error fetching fertilizers:", err);
