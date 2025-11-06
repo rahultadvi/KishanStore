@@ -1,40 +1,104 @@
-/* Hero Section */
+/* 🌾 Hero Section */
 .hero-section {
   background: linear-gradient(
       rgba(0, 100, 0, 0.7),
       rgba(0, 100, 0, 0.7)
     ),
-    url("https://img.freepik.com/free-photo/fresh-green-wheat-field-agriculture_1150-15606.jpg") center/cover
-      no-repeat;
+    url("https://img.freepik.com/free-photo/fresh-green-wheat-field-agriculture_1150-15606.jpg")
+      center/cover no-repeat;
   height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Highlight Cards */
+.hero-section h1 {
+  font-size: 3rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 55vh;
+    background-position: center;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+/* 🌱 Highlight Cards */
 .highlight-card {
   border: none;
-  transition: all 0.3s ease;
   border-radius: 15px;
-  overflow: hidden;
   background: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .highlight-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Product Cards */
+/* 🌟 Product Cards */
 .product-card {
   border: none;
   border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌈 Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in-delay {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-in-delay2 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* 📱 Responsive Image Fix */
+img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  img {
+    max-height: 180px;
+  }
 }
